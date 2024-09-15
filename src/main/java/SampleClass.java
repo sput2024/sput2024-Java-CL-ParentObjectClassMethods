@@ -61,11 +61,44 @@
 public class SampleClass {
     public int a;
     public boolean b;
-
+ 
     //    implement a custom .equals(SampleClass other){} method here.
 
-
-    //    implement a custom .toString(){} method here.
-
     
+    public boolean equals(SampleClass other) {
+    
+    if ((other.a == this.a)&&(other.b == this.b)){   
+    return true;
+    }
+    
+    return false;
+    
+    //    implement a custom .toString(){} method here.    
+
+    //int k = this.a;
+   // other.toString();
+}
+    public String toString(){
+        //int k = this.a;
+        String str = String.valueOf(this.a);
+        //System.out.println(str);
+        String full = str;
+        if (this.b == true){
+            System.out.print( "true");
+            full = "true" + full;
+        }
+        if (this.b == false){
+            System.out.print("false");
+            full = "false" + full;
+        }
+         
+        
+       // String str = Integer.toString(this.a);
+    
+      return full;
+       // return "exit";
+
+     }
+    
+
 }
